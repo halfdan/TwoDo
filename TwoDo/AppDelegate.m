@@ -13,6 +13,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [self.statusItem setMenu:self.statusMenu];
+    [self.statusItem setTitle:@"My App"];
+    [self.statusItem setHighlightMode:YES];
 }
 
 @end
