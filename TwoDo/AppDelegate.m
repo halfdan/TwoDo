@@ -13,10 +13,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+    NSImage *statusImage = [NSImage imageNamed:@"TheZ.tiff"];
+    [self.statusItem setImage:statusImage];
     [self.statusItem setMenu:self.statusMenu];
-    [self.statusItem setTitle:@"My App"];
     [self.statusItem setHighlightMode:YES];
+    [self.statusItem setTitle:NSLocalizedString(@"Special Status", @"status menu item text")];
 }
+
 
 @end
